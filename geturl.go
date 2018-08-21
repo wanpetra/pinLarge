@@ -53,7 +53,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 	//create new titles
 	feedk := strings.Replace(feedj, "&gt;&lt;/a&gt;", "&gt;&lt;/a&gt;</description1><title>", -1)
 	//feedl := strings.Replace(feedk, "</description1><pubDate>", "&lt;p&gt;&lt;a href=&quot;https://www.homeinteriordesign.org&quot;&gt;Here is an awesome home interior design and decor blog&lt;/a&gt;&lt;/p&gt;</title><pubDate>", -1)
-	feedl := strings.Replace(feedk, "</description1><pubDate>", "&lt;p&gt;&lt;a href=&quot;http://www.homeinteriordesign.org/2018/02/short-guide-to-interior-decoration.html&quot;&gt;Short guide to interior decoration&lt;/a&gt;&lt;/p&gt;</title><pubDate>", -1)
+	feedl := strings.Replace(feedk, "</description1><pubDate>", "&lt;p&gt;&lt;a href=&quot;http://www.homeinteriordesign.org/2018/02/short-guide-to-interior-decoration.html&quot;/a&gt;&lt;/p&gt;</title><pubDate>", -1)
 	//restore description
 	feedm := strings.Replace(feedl, "</description1>", "</description>", -1)
 	feedn := strings.Replace(feedm, "<description1>", "<description>", -1)
